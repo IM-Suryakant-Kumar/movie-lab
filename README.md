@@ -20,6 +20,7 @@ A React application that allows users to search for movies using an external API
 4. Fully Responsive
 
 ## Tech Stack
+- HTML
 - React
 - React Hooks
 - react-router-dom
