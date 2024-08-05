@@ -35,3 +35,10 @@
 	background-color: darkblue;
 	background-clip: content-box;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}

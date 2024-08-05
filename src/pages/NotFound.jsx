@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Title = styled.h2`
+const Title = styled.h2`
 	color: darkgray;
 	font-size: larger;
 	height: calc(100vh - 4rem);

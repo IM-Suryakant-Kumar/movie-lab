@@ -1,5 +1,9 @@
+import { MovieList } from "../../components"
+
 export const Home = () => {
   return (
-    <>Home</>
+    <main>
+      <MovieList />
+    </main>
   )
 }

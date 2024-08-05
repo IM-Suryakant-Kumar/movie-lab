@@ -10,7 +10,7 @@ export const Container = styled.div`
 	border-radius: 0.25em;
 
 	@media screen and (min-width: 768px) {
-		height: 2.5rem;
+		height: 2.4rem;
 	}
 `;
 
@@ -38,6 +38,6 @@ export const SearchIcon = styled.img.attrs({
   border-radius: 0 0.25em 0.25em 0;
 
   @media screen and (min-width: 768px) {
-		height: 2.5rem;
+		height: 2.4rem;
 	}
 `;
