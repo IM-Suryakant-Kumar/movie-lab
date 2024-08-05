@@ -4,12 +4,18 @@ import { createContext, useContext, useEffect, useState } from "react";
 const MovieContext = createContext(null);
 
 export const MainProvider = ({ children }) => {
-	const [movies, setMovies] = useState(null);
+	const [moviesData, setMoviesData] = useState({ Search: null, totalResults: 0 });
 	const [isLoading, setIsLoading] = useState(false);
 	const [searchText, setSearchText] = useState("new");
 	const [page, setPage] = useState(1);
 
-  // enviroment
+	// // calculate total page
+	let totalPage = moviesData?.totalResults / 10;
+	if (moviesData?.totalResults % 10) {
+		totalPage++;
+	}
+
+	// enviroment
 	const apikey = import.meta.env.VITE_API_KEY;
 
 	useEffect(() => {
@@ -19,7 +25,7 @@ export const MainProvider = ({ children }) => {
 		fetch(`http://www.omdbapi.com/?apikey=${apikey}&s=${searchText}&page=${page}`)
 			.then((res) => res.json())
 			.then((data) => {
-				setMovies(data.Search);
+				setMoviesData(data);
 				// final state after success
 				setIsLoading(false);
 			})
@@ -31,7 +37,9 @@ export const MainProvider = ({ children }) => {
 	}, [page, searchText, apikey]);
 
 	return (
-		<MovieContext.Provider value={{ isLoading, movies, setSearchText, setPage }}>
+		<MovieContext.Provider
+			value={{ isLoading, movies: moviesData.Search, setSearchText, page, setPage, totalPage }}
+		>
 			{children}
 		</MovieContext.Provider>
 	);

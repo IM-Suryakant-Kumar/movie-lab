@@ -9,7 +9,7 @@ A React application that allows users to search for movies using an external API
 - [x] MovieList component
 - [x] MovieCard component
 - [x] Movie details on Click
-- [ ] Pagination
+- [x] Pagination
 - [ ] Searching with debounce
 - [ ] Make pagination interactive
 
