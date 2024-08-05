@@ -1,1 +1,3 @@
-export * from "./Layout/Layout";
+export * from "./Layout";
+export * from "./Navbar/Navbar";
+export * from "./SearchBar/SearchBar";

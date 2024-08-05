@@ -4,8 +4,8 @@ A React application that allows users to search for movies using an external API
 
 ## Todo
 - [x] Layout Setup
-- [ ] Navbar component
-- [ ] SearchBar component
+- [x] Navbar component
+- [x] SearchBar component
 - [ ] MovieList component
 - [ ] MovieCard component
 - [ ] Movie details on hover
