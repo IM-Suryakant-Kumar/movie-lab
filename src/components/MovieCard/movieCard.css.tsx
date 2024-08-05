@@ -4,6 +4,7 @@ export const Container = styled.div`
 	border: 4px solid var(--color-logo);
 	border-radius: 0.5em;
 	position: relative;
+  cursor: pointer;
 `;
 
 export const Image = styled.img`
