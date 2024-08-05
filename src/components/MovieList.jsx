@@ -1,7 +1,13 @@
 import styled from "styled-components";
 import { useMovies } from "../features/context";
+import { MovieCard } from ".";
 
-const Container = styled.section``;
+const Container = styled.section`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 1em;
+  padding: 1em;
+`;
 
 export const MovieList = () => {
 	const { isLoading, movies } = useMovies();
@@ -11,7 +17,7 @@ export const MovieList = () => {
 	return (
 		<Container>
 			{movies?.map((movie) => (
-				<h2 key={movie.imdbID}>{movie.Title}</h2>
+				<MovieCard key={movie.imdbID} movie={movie} />
 			))}
 		</Container>
 	);

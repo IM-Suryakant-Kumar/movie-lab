@@ -16,6 +16,7 @@ export const Container = styled.div`
 
 export const Input = styled.input.attrs({
   type: "text",
+  placeholder: "Search here"
 })`
 	margin: 1em;
 	width: calc(100% - 1.5rem);
