@@ -12,7 +12,7 @@ import {
 } from "./movieDetailsModal.css";
 
 export const MovieDetailsModal = ({ movieDetails, setMovieDetails }) => {
-	console.log(movieDetails);
+	// console.log(movieDetails);
 
 	const handleCloseButton = (e) => {
 		// to prevent parent click event
