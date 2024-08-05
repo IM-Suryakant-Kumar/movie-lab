@@ -6,15 +6,21 @@ const MovieContext = createContext(null);
 export const MainProvider = ({ children }) => {
 	const [moviesData, setMoviesData] = useState({ Search: null, totalResults: 0 });
 	const [isLoading, setIsLoading] = useState(false);
-	const [searchText, setSearchText] = useState("new");
+	const [searchText, setSearchText] = useState();
 	const [page, setPage] = useState(1);
-
-  console.log(searchText)
 
 	// calculate total page
 	let totalPage = moviesData?.totalResults / 10;
 	if (moviesData?.totalResults % 10) {
 		totalPage++;
+	}
+
+	// default searchText
+	let tempSearchText;
+	if (!searchText) {
+		tempSearchText = "new";
+	} else {
+		tempSearchText = searchText;
 	}
 
 	// enviroment
@@ -24,7 +30,7 @@ export const MainProvider = ({ children }) => {
 		// initial state
 		setIsLoading(true);
 
-		fetch(`http://www.omdbapi.com/?apikey=${apikey}&s=${searchText}&page=${page}`)
+		fetch(`https://www.omdbapi.com/?apikey=${apikey}&s=${tempSearchText}&page=${page}`)
 			.then((res) => res.json())
 			.then((data) => {
 				setMoviesData(data);

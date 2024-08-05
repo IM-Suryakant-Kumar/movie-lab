@@ -10,7 +10,7 @@ export const MovieCard = ({ movie }) => {
 	const apikey = import.meta.env.VITE_API_KEY;
 
 	const handleMovieDetails = async () => {
-		const res = await fetch(`http://www.omdbapi.com/?apikey=${apikey}&i=${movie.imdbID}`);
+		const res = await fetch(`https://www.omdbapi.com/?apikey=${apikey}&i=${movie.imdbID}`);
 		const movieDetais = await res.json();
 		setMovieDetails(movieDetais);
 	};
