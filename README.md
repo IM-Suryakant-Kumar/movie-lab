@@ -10,8 +10,8 @@ A React application that allows users to search for movies using an external API
 - [x] MovieCard component
 - [x] Movie details on Click
 - [x] Pagination
-- [ ] Searching with debounce
-- [ ] Make pagination interactive
+- [x] Searching with debounce
+- [x] Make pagination interactive
 
 ## Features
 1. Search movies
@@ -23,6 +23,7 @@ A React application that allows users to search for movies using an external API
 - HTML
 - React
 - React Hooks
+- Context API
 - react-router-dom
 - styled-components
 - prop-types

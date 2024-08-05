@@ -9,7 +9,9 @@ export const MainProvider = ({ children }) => {
 	const [searchText, setSearchText] = useState("new");
 	const [page, setPage] = useState(1);
 
-	// // calculate total page
+  console.log(searchText)
+
+	// calculate total page
 	let totalPage = moviesData?.totalResults / 10;
 	if (moviesData?.totalResults % 10) {
 		totalPage++;

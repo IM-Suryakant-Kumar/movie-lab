@@ -15,7 +15,7 @@ export const MovieCard = ({ movie }) => {
 		setMovieDetails(movieDetais);
 	};
 
-	console.log(movieDetails);
+	// console.log(movieDetails);
 
 	return (
 		<Container onClick={handleMovieDetails}>

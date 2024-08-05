@@ -10,6 +10,7 @@ export const Container = styled.div`
 export const Image = styled.img`
 	width: 100%;
 	height: 100%;
+  min-height: 23rem;
 `;
 
 export const Info = styled.div`
